@@ -40,6 +40,10 @@ npm run dev
 | --- | --- | --- |
 | `DATABASE_URL` | no | Postgres for OTP login, enrollments, progress + history sync. Without it the app runs in **Guest mode**: browsing and video playback work, login is disabled with a clear message. |
 
+To enable login, run [`sql/init.sql`](sql/init.sql) in your database and set
+`DATABASE_URL` (Supabase → Project Settings → Database → Connection string →
+URI; use the **Session pooler** host and URL-encode special characters).
+
 ## Scripts
 
 ```bash
